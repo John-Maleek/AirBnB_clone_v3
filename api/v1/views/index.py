@@ -19,7 +19,7 @@ def app_status():
     return (jsonify({"status": "OK"}))
 
 
-@app_views.route("/stats")
+@app_views.route("/stats", strict_slashes=False)
 def app_stats():
     res_object = {"amenities": storage.count(Amenity),
                   "cities": storage.count(City),
@@ -27,4 +27,4 @@ def app_stats():
                   "reviews": storage.count(Review),
                   "states": storage.count(State),
                   "users": storage.count(User)}
-    return jsonify(res_object)
+    return (jsonify(res_object))
