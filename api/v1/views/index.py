@@ -13,8 +13,6 @@ from models.review import Review
 from models.user import User
 from models import storage
 
-# export PYTHONPATH="/Users/mainstacksocialcommerce/Desktop/AirBnB_clone_v3:$PYTHONPATH"
-
 
 @app_views.route('/status', strict_slashes=False)
 def app_status():
